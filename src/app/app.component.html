@@ -1,0 +1,60 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark py-0 fixed-top nav-menu">
+    <img
+      src="assets/images/Logo.png"
+      class="my-2 ms-2 me-2"
+      alt="Logo Orange"
+      title="Logo Orange"
+      width="80px"
+      height="35px"
+    />
+    <h5 class="text-light d-flex align-items-center mb-0">Music eco</h5>
+
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a
+          href="/home"
+          class="nav-link"
+          routerLink="home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          href="/admin"
+          class="nav-link"
+          routerLink="admin"
+          routerLinkActive="active"
+          >Administration</a
+        >
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ms-auto" *ngIf="isLoggedIn">
+      <li class="nav-item d-flex align-items-center me-2">
+        <button class="btn btn-outline-primary btn-sm" (click)="toggleTheme()">
+          Toggle
+        </button>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ms-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{
+          trigramme
+        }}</a>
+      </li>
+      <li class="nav-item d-flex align-items-center me-2">
+        <a href class="btn btn-outline-primary btn-sm" (click)="logout()"
+          >Déconnexion</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <div class="mt-5">
+    <router-outlet></router-outlet>
+  </div>
+</div>

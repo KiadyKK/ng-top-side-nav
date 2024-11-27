@@ -1,0 +1,65 @@
+:root {
+  --background: whitesmoke;
+  --background-body: rgb(230, 230, 230);
+
+  --text-color: whitesmoke;
+
+  --table-border: rgb(196, 201, 214);
+
+  --white: whitesmoke;
+
+  --dark: #0c0c0c;
+
+  --red: #dc3545;
+
+  --invalid-blur: rgba(218, 68, 68, 0.291);
+
+  --gris: gray;
+  --gris-1: rgb(78, 85, 110);
+
+  --yellow: rgb(233, 233, 0);
+  --yellow-opac: rgba(255, 238, 0, 0.2);
+
+  --blue: #0d6efd;
+  --blue-opac: rgba(72, 114, 250, 0.5);
+
+  --brown: #6d3300;
+  --brown-opac: rgba(255, 121, 0, 0.5);
+
+  --purple: #c90dfd;
+  --purple-opac: rgba(250, 72, 232, 0.377);
+}
+
+[data-theme="dark"] {
+  --background: #212529;
+  --background-inverse: #212529;
+  --background-body: #171a1d;
+  --background-body-inverse: #171a1d;
+  --text-color: whitesmoke;
+  --table-border: rgb(58, 60, 68);
+}
+
+[data-theme="light"] {
+  --background: white;
+  --background-inverse: rgb(230, 230, 230);
+  --background-body: rgb(230, 230, 230);
+  --background-body-inverse: white;
+  --text-color: #212529;
+  --table-border: rgb(196, 201, 214);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
